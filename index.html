@@ -19,15 +19,16 @@
             <h1>HW</h1>
             <h5>health by weight</h5>
             <div class="button_area">
-                <a class="btn" href="#calculate">Calculate</a>
-                <a class="btn btn-second" href="#dashboard">Dashboard</a>
+                <a onclick="calculateTab()" class="btn" href="#calculate">Calculate</a>
+                <a onclick="dashboardTab()" class="btn btn-second" href="#dashboard">Dashboard</a>
             </div>
         </div>
     </header>
     <section id="calculate">
+        
         <h1>Calculate</h1>
         <h5>Your Health</h5>
-        <div class="container"><a class="btn" href="#"><i class="fas fa-home"></i></a>
+        <div class="container"><a onclick="headerTab()" id="home" class="btn" href="#"><i class="fas fa-home"></i></a>
         <div class="container calculate_container">
             <form onsubmit="return false">
                 <div class="form">
@@ -44,13 +45,13 @@
                     <input id="age" type="text" name="" placeholder="age (ex: 25years)" required>
                 </div>
                 <button onclick="calculate()" class="btn btn-second" >calulate</button>
-                <a class="btn" href="#dashboard">Dashboard</a>
+                <a onclick="dashboardTab()" class="btn" href="#dashboard">Dashboard</a>
             </form>
         </div>
     </section>
     <section id="dashboard">
         <h1>Dashboard</h1>
-        <div class="container"><a class="btn" href="#"><i class="fas fa-home"></i></a>
+        <div class="container"><a onclick="headerTab()" id="home" class="btn" href="#"><i class="fas fa-home"></i></a>
             <div class="user_data">
                 <div class="data">
                     <h5>Age</h5>
