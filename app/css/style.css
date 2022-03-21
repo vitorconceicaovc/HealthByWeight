@@ -48,8 +48,8 @@ footer a:hover {
 
 /*Calculate*/
 
-#calculate {
-    
+#calculate h5{
+    margin-bottom: 2rem;
 }
 
 #calculate h1 {
