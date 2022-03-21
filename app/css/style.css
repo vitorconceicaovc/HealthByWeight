@@ -161,14 +161,14 @@ input {
 
 .user_data {
     margin-top: 2rem;
-    border: 1px solid var(--color-primary-variant);
+    border: 1px solid var(--color-primary);
     border-radius: 1rem;
     width: 100%;
     display: grid;
     grid-gap: 1.5rem;
     gap: .5rem;
     grid-template-columns: repeat(4,1fr);
-    background: var(--color-primary-variant);
+    background: var(--color-primary);
     transition: var(--transition);
 }
 
@@ -267,6 +267,7 @@ input {
     grid-template-columns: 1fr;
     background: var(--color-primary-variant);
     transition: var(--transition);
+    padding: 2rem;
 }
 
 .weight_results:hover {
@@ -317,13 +318,13 @@ input {
 
 .final_result {
     margin-top: 2rem;
-    border: 1px solid var(--color-primary-variant);
+    border: 1px solid var(--color-primary);
     border-radius: 1rem;
     display: grid;
     grid-gap: 1.5rem;
     gap: .5rem;
     grid-template-columns: 2fr ;
-    background: var(--color-primary-variant);
+    background: var(--color-primary);
     transition: var(--transition);
     padding: 2rem;
     text-align: center;

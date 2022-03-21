@@ -22,11 +22,11 @@ function calculate() {
     //gender print
     switch (true) {
         case (document.querySelector('#Check2').required == true): {
-            document.querySelector('#gender_data').innerHTML = "F"
+            document.querySelector('#gender_data').innerHTML = "Female"
             break;
         }
         case (document.querySelector('#Check2').required == false): {
-            document.querySelector('#gender_data').innerHTML = "M"
+            document.querySelector('#gender_data').innerHTML = "Male"
             break;
         }
         default: {
