@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app/css/geral.css">
+    <link rel="stylesheet" href="app/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Peso</title>
+</head>
+<body>
+    <header id="header">
+        <footer>
+            <a href="http://www.vitorconceicao.com" target="blank"><small>© Vítor Conceição</small></a>
+        </footer>
+        <div class="container header_container">
+            <h5>Welcome to</h5>
+            <h1>Peso e altura</h1>
+            <h5>Calcurad e pelo peso</h5>
+            <div class="button_area">
+                <a class="btn" href="#calculate">Calculate</a>
+                <a class="btn btn-second" href="#dashboard">Dashboard</a>
+            </div>
+        </div>
+    </header>
+    <section id="calculate">
+        <h1>Peso e altura</h1>
+        <div class="container"><a class="btn" href="#"><i class="fas fa-home"></i></a>
+        <div class="container calculate_container">
+            <form onsubmit="return false">
+                <div class="form">
+                    <div class="gen_area">
+                        <div class="m">
+                            <input onclick="selectOnlyThis(this)" id="Check1" name="myCheckbox" value="1" type="checkbox" required><i class="fa-solid fa-mars"></i>
+                        </div>
+                        <div class="f">
+                            <input onclick="selectOnlyThis(this)" id="Check2" name="myCheckbox" value="2" type="checkbox" required><i class="fa-solid fa-venus"></i>
+                        </div>
+                    </div>
+                    <input id="weight" type="text" name="" placeholder="weight (ex: 65kg)" required>
+                    <input id="height" type="text" name="" placeholder="height (ex: 175cm)" required>
+                    <input id="age" type="text" name="" placeholder="age (ex: 25years)" required>
+                </div>
+                <button onclick="calculate()" class="btn btn-second" >calulate</button>
+                <a class="btn" href="#dashboard">Dashboard</a>
+            </form>
+        </div>
+    </section>
+    <section id="dashboard">
+        <h1>Dashboard</h1>
+        <div class="container"><a class="btn" href="#"><i class="fas fa-home"></i></a>
+            <div class="user_data">
+                <div class="data">
+                    <h5>Age</h5>
+                    <h1 id="age_data"></h1>
+                </div>
+                <div class="data">
+                    <h5>Gender</h5>
+                    <h1 id="gender_data"></h1>
+                </div>
+                <div class="data">
+                    <h5>Height</h5>
+                    <h1 id="height_data"></h1>
+                </div>
+                <div class="data">
+                    <h5>Weight</h5>
+                    <h1 id="weight_data"></h1>
+                </div>
+            </div>
+            <div class="user_results">
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+            </div>
+        </div>  
+        <div class="container">
+            <div class="second_container">
+                <div class="water_results">
+                    <div class="top">
+                        <h5>your ideal consumption is</h5>
+                        <h1 id="liters"></h1>
+                        <h5>per day</h5>
+                    </div>
+                    <div class="down">
+                        <div class="left">
+                            <h1 id="bottles"></h1>
+                            <h5>500ml bottles</h5>
+                        </div>
+                        <div class="right">
+                            <h1 id="cups"></h1>
+                            <h5>310ml cups</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="weight_results">
+                    <h1 id="imc"></h1>
+                    <h5>IMC</h5>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="third_container">
+                <div class="ideal_weight">
+                    <h1 id="ideal_weight"></h1>
+                    <h5>ideal weight</h5>
+                </div>
+                <div class="final_result">
+                    <h1 id="final_result"></h1>
+                    <h5>ideal_weight</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="app/js/slide.js"></script>
+    <script src="app/js/math.js"></script>
+</body>
+</html>
