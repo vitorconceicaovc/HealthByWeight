@@ -61,6 +61,4 @@ function calculate() {
             break;
         }
     }
-
-
 }
