@@ -381,6 +381,18 @@ input {
     color: var(--color-white);
 }
 
+/*animation*/
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateZ(0);
+    }
+}
 
 /*responsive*/
 

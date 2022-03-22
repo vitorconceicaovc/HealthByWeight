@@ -14,6 +14,10 @@ body {
     background: var(--color-bg-variant);
 }
 
+.active {
+    animation: slide .6s ease-in-out both;
+}
+
 :root {
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;
