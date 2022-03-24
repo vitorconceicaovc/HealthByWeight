@@ -23,10 +23,14 @@ function calculate() {
     switch (true) {
         case (document.querySelector('#Check2').required == true): {
             document.querySelector('#gender_data').innerHTML = "Female"
+            var female = 1
+            var male = 0
             break;
         }
         case (document.querySelector('#Check2').required == false): {
             document.querySelector('#gender_data').innerHTML = "Male"
+            var female = 0
+            var male = 1
             break;
         }
         default: {
@@ -55,6 +59,169 @@ function calculate() {
         }
         case (document.querySelector('#Check1').required == false): {
             document.querySelector('#ideal_weight').innerHTML = idealWeightF.toFixed(1) + " kg"
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+    //resume
+    switch (true) {
+        //<18 male
+        case (age < 18 && male == 1): {
+            switch (true) {
+                case (imc < 16.5) : {
+                    document.querySelector('#final_result').innerHTML = "Low weight"
+                    break;
+                }
+                case (imc < 22.5) : {
+                    document.querySelector('#final_result').innerHTML = "Normal weight"
+                    break;
+                }
+                case (imc < 27) : {
+                    document.querySelector('#final_result').innerHTML = "Overweight"
+                    break;
+                }
+                case (imc >= 27) : {
+                    document.querySelector('#final_result').innerHTML = "Obesity"
+                    break;
+                }
+                default: {
+                    break;
+                }
+            } 
+            break;
+        }
+        //<18 female
+        case (age < 18 && female == 1): {
+            switch (true) {
+                case (imc < 16.2) : {
+                    document.querySelector('#final_result').innerHTML = "Low weight"
+                    break;
+                }
+                case (imc < 22.4) : {
+                    document.querySelector('#final_result').innerHTML = "Normal weight"
+                    break;
+                }
+                case (imc < 27.2) : {
+                    document.querySelector('#final_result').innerHTML = "Overweight"
+                    break;
+                }
+                case (imc >= 27.2) : {
+                    document.querySelector('#final_result').innerHTML = "Obesity"
+                    break;
+                }
+                default: {
+                    break;
+                }
+            } 
+            break;
+        }
+        //>18
+        case (age >=18 ): {
+            switch (true) {
+                case (imc < 16) : {
+                    document.querySelector('#final_result').innerHTML = "very serious low weight"
+                    break;
+                }
+                case (imc <= 16.99) : {
+                    document.querySelector('#final_result').innerHTML = "severe low weight"
+                    break;
+                }
+                case (imc <= 18.49) : {
+                    document.querySelector('#final_result').innerHTML = "Low weight"
+                    break;
+                }
+                case (imc <= 24.99) : {
+                    document.querySelector('#final_result').innerHTML = "Normal weight"
+                    break;
+                }
+                case (imc <= 29.99) : {
+                    document.querySelector('#final_result').innerHTML = "Overweight"
+                    break;
+                }
+                case (imc <= 34.99) : {
+                    document.querySelector('#final_result').innerHTML = "Grade I obesity"
+                    break;
+                }
+                case (imc <= 39.99) : {
+                    document.querySelector('#final_result').innerHTML = "Grade II obesity"
+                    break;
+                }
+                case (imc > 40) : {
+                    document.querySelector('#final_result').innerHTML = "Grade III obesity"
+                    break;
+                }
+                default: {
+                    break;
+                }
+            } 
+            break;
+        }
+        //>65 female
+        case (age > 65 && female == 1): {
+            switch (true) {
+                case (imc < 21.9) : {
+                    document.querySelector('#final_result').innerHTML = "Low weight"
+                    break;
+                }
+                case (imc <= 27) : {
+                    document.querySelector('#final_result').innerHTML = "Normal weight"
+                    break;
+                }
+                case (imc <= 32) : {
+                    document.querySelector('#final_result').innerHTML = "Overweight"
+                    break;
+                }
+                case (imc <= 37) : {
+                    document.querySelector('#final_result').innerHTML = "Grade I obesity"
+                    break;
+                }
+                case (imc <= 41.9) : {
+                    document.querySelector('#final_result').innerHTML = "Grade II obesity"
+                    break;
+                }
+                case (imc > 42) : {
+                    document.querySelector('#final_result').innerHTML = "Grade III obesity"
+                    break;
+                }
+                default: {
+                    break;
+                }
+            } 
+            break;
+        }
+        //>65 male
+        case (age > 65 && male == 1): {
+            switch (true) {
+                case (imc < 21.9) : {
+                    document.querySelector('#final_result').innerHTML = "Low weight"
+                    break;
+                }
+                case (imc <= 27) : {
+                    document.querySelector('#final_result').innerHTML = "Normal weight"
+                    break;
+                }
+                case (imc <= 30) : {
+                    document.querySelector('#final_result').innerHTML = "Overweight"
+                    break;
+                }
+                case (imc <= 35) : {
+                    document.querySelector('#final_result').innerHTML = "Grade I obesity"
+                    break;
+                }
+                case (imc <= 39.9) : {
+                    document.querySelector('#final_result').innerHTML = "Grade II obesity"
+                    break;
+                }
+                case (imc > 40) : {
+                    document.querySelector('#final_result').innerHTML = "Grade III obesity"
+                    break;
+                }
+                default: {
+                    break;
+                }
+            } 
             break;
         }
         default: {
