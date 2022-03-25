@@ -57,7 +57,12 @@ footer a:hover {
     color: var(--color-primary);
 }
 
-
+#calculate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .calculate_container {
     margin-top: 2rem;
@@ -426,7 +431,12 @@ input {
     .user_data {
         grid-template-columns: 1fr;
     }
-    
+    .header_container .button_area {
+        flex-direction: column;
+    }
+    .header_container .button_area .btn{
+        width: 100%;
+    }
     
 }
 
