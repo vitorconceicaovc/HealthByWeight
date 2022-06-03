@@ -11,7 +11,7 @@
 </p>
 
 
-<img src="img/image.png" alt="">
+<img src="app/img/image.png" alt="">
 
 
 <br>
