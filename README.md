@@ -26,9 +26,9 @@
 </p>
 
 # Features
-- [x] Ideal consumption of water per day
-- [x] IMC
-- [x] Ideal weight
+- [x] Ideal consumption of water per day.
+- [x] IMC.
+- [x] Ideal weight.
 - [x] Weight situation.
 
 
